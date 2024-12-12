@@ -1,23 +1,178 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
 }
 
 header {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1em 0;
+    padding: 20px 0;
+}
+
+header .logo {
+    max-width: 150px;
+    margin-bottom: 10px;
 }
 
 main {
     padding: 20px;
 }
 
-footer {
-    background-color: #333;
-    color: white;
+h1, h2, h3 {
+    color: #555;
+}
+
+/* Styl pro sekci Produktet */
+.product-gallery {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
     text-align: center;
-    padding: 1em 0;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-gallery h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Kontejner pro produkty */
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Mezera mezi produkty */
+    justify-content: center;
+}
+
+/* Jednotlivé produkty */
+.product {
+    text-align: center;
+    max-width: 150px; /* Šířka každého produktu */
+    margin-bottom: 20px;
+}
+
+/* Obrázky produktů */
+.product img {
+    width: 100%; /* Přizpůsobení šířky rodiči */
+    height: auto; /* Zachování proporcí */
+    border-radius: 8px; /* Zaoblené rohy */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Jemný stín */
+    transition: transform 0.3s ease; /* Efekt při najetí */
+}
+
+.product img:hover {
+    transform: scale(1.05); /* Mírné zvětšení při najetí myší */
+}
+
+/* Popis produktu */
+.product p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+    font-weight: bold;
+}
+
+/*video*/
+video {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/*about me*/
+/* Styl pro sekci O mně */
+.about-me {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Nadpis */
+.about-me h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Obsah */
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Obrázek */
+.profile-pic {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Seznam */
+.about-content ul {
+    list-style-type: disc;
+    margin: 20px 0;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.about-content ul li {
+    margin: 10px 0;
+}
+
+/* Zvýraznění textu */
+.about-content strong {
+    color: #333;
+}
+
+
+/*KONTAKT*/
+/* Styl pro sekci Kontakt */
+.contact {
+    padding: 40px 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Nadpis sekce */
+.contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Obsah kontaktu */
+.contact-info {
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Odkazy v kontaktu */
+.contact-info a {
+    text-decoration: none;
+    color: #833AB4; /* Instagram fialová */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #E1306C; /* Instagram růžová */
 }
