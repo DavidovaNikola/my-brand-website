@@ -2,6 +2,8 @@ const translations = {
     en: {
         header: "Welcome to My Brand",
         aboutTitle: "About Me",
+        videoTitle: "Watch the Videos", // Překlad pro Shiko Videon
+        productTitle: "Products", // Překlad pro Produktet
         aboutContent: `
             <p>Hello! I am <strong>Adriana</strong>, and I create unique and personalized clothing with love and dedication for everyone who appreciates style and quality.</p>
             <p>I offer a wide range of products, including:</p>
@@ -19,6 +21,8 @@ const translations = {
     sq: {
         header: "Miresevini te Marka Ime",
         aboutTitle: "Rreth Meje",
+        videoTitle: "Shiko Videon", // Původní albánský text
+        productTitle: "Produktet", // Původní albánský text
         aboutContent: `
             <p>Përshëndetje! Unë jam <strong>Adriana</strong>, dhe krijoj me dashuri dhe përkushtim veshje unike dhe të personalizuara për të gjithë ata që vlerësojnë stilin dhe cilësinë.</p>
             <p>Ofroj një gamë të gjerë produktesh, duke përfshirë:</p>
@@ -35,12 +39,19 @@ const translations = {
     },
 };
 
+
 document.getElementById("language-switch").addEventListener("click", function () {
     const lang = this.textContent === "English" ? "en" : "sq";
     this.textContent = lang === "en" ? "Shqip" : "English";
 
-    document.querySelector("h1").textContent = translations[lang].header;
-    document.querySelector(".about-me h2").textContent = translations[lang].aboutTitle;
-    document.querySelector(".about-content").innerHTML = translations[lang].aboutContent;
-    document.querySelector(".contact h2").textContent = translations[lang].contactTitle;
+    const translation = translations[lang];
+
+    document.querySelector("h1").textContent = translation.header;
+    document.querySelector(".about-me h2").textContent = translation.aboutTitle;
+    document.querySelector(".about-content").innerHTML = translation.aboutContent;
+    document.querySelector(".contact h2").textContent = translation.contactTitle;
+
+    // Překlad nadpisů Shiko Videon a Produktet
+    document.querySelector(".video-section h2").textContent = translation.videoTitle;
+    document.querySelector(".product-gallery h2").textContent = translation.productTitle;
 });
